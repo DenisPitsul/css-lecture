@@ -2,38 +2,62 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 16px;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-article {
+body {
+    padding: 10px;
     display: flex;
-    flex-wrap: wrap-reverse;
-    gap: 1em;
-    max-width: 800px;
-    min-width: 320px;
-    margin: 0 auto;
-    box-shadow: 0 0 5px lightcoral;
-    padding: 1em;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-img {
-    height: 200px;
-    object-fit: cover;
-}
-
-div, img {
-    flex-basis: 300px;
+.user-card {
     flex-grow: 1;
-}
-
-div {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    flex-basis: 300px;
+    min-width: 280px;
+    box-shadow: 0 0 10px purple;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.edit-btn {
+    align-self: flex-end;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: gray;
+}
+
+.user-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.membership-section {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    margin-top: auto;
+}
+
+.social-links-list {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
     justify-content: center;
-    gap: 1em;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 50%;
 }
