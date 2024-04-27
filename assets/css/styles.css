@@ -4,58 +4,21 @@
 
 body {
     padding: 20px;
-    font-family: sans-serif;
 }
 
-article {
-    position: relative;
-    min-width: 250px;
-    max-width: 350px;
-    width: 100%;
-    padding: 30px;
-    background-image: linear-gradient(to left, #ff6699 0%, #ffcc99 100%);
-    border-radius: 4px;
-    overflow: hidden;
-    color: white;
+button {
+    background-color: aqua;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s linear, 
+                box-shadow 0.2s linear,
+                transform 0.2s linear;
 }
 
-.first-line {
-    display: flex;
-    justify-content: space-between;
-}
-
-.count {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 15px 0 30px;
-}
-
-/* .circle {
-    position: absolute;
-    right: -30px;
-    bottom: -75px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-} */
-
-article::before, 
-article::after {
-    content: '';
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-article::before {
-    right: -30px;
-    bottom: -75px;
-}
-
-article::after {
-    top: -30px;
-    right: -70px;
+button:hover {
+    background-color: red;
+    box-shadow: 0 0 10px black;
+    transform: scale(1.1);
 }
