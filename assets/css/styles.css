@@ -3,42 +3,59 @@
 }
 
 body {
-    background-color: lightcoral;
+    padding: 20px;
+    font-family: sans-serif;
 }
 
-p {
-    color: brown;
+article {
+    position: relative;
+    min-width: 250px;
+    max-width: 350px;
+    width: 100%;
+    padding: 30px;
+    background-image: linear-gradient(to left, #ff6699 0%, #ffcc99 100%);
+    border-radius: 4px;
+    overflow: hidden;
+    color: white;
 }
 
-p::first-letter {
-    color: blue;
-    font-size: 32px;
+.first-line {
+    display: flex;
+    justify-content: space-between;
 }
 
-p::first-line {
-    color: pink;
+.count {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px 0 30px;
 }
 
-p::selection {
-    color: red;
+/* .circle {
+    position: absolute;
+    right: -30px;
+    bottom: -75px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+} */
+
+article::before, 
+article::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-li::marker {
-    color: grey;
+article::before {
+    right: -30px;
+    bottom: -75px;
 }
 
-p::before {
-    content: 'START --';
-}
-
-p::after {
-    content: '-- END';
-}
-
-span::before {
-    content: '<<';
-}
-
-span::after {
-    content: '>>';
+article::after {
+    top: -30px;
+    right: -70px;
 }
